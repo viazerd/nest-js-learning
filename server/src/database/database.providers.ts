@@ -13,10 +13,14 @@ export const databaseProviders = [
                 username:'sa',
                 password:'root',
                 database:'test',
+                define:{timestamps:false}   
             });
             sequelize.addModels([User]);
 
-            await sequelize.sync();
+            await sequelize.sync(
+                // {force:true}
+                
+            );
             return sequelize
         }
     }

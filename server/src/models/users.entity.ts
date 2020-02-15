@@ -6,6 +6,9 @@ export class User extends Model<User>{
     name: string;
 
     @Column
-    birthday: Date;
+    email: string;
+
+    @Column
+    age:number
 
 }
